@@ -1,13 +1,8 @@
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
+import { IRouterLinkProps } from "./type";
 
-interface RouterLinkProps {
-    href: string,
-    name: string,
-    className?: string
-}
-
-const RouterLink: React.FC<RouterLinkProps> = ({href, name, className}) => {
+const RouterLink: React.FC<IRouterLinkProps> = ({href, name, className}) => {
     return(
         <Link href={href} className={className}>{name}</Link>
     )
