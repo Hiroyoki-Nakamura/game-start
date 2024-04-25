@@ -1,0 +1,5 @@
+export interface IRouterLinkProps {
+    href: string,
+    name: string,
+    className?: string
+}
