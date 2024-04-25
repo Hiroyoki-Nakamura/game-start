@@ -2,13 +2,14 @@ import Link from "next/link";
 import React from "react";
 
 interface RouterLinkProps {
-    href: string;
-    children: React.ReactNode;
+    href: string,
+    name: string,
+    className?: string
 }
 
-const RouterLink: React.FC<RouterLinkProps> = ({href, children}) => {
+const RouterLink: React.FC<RouterLinkProps> = ({href, name, className}) => {
     return(
-        <Link href={href}><span>{children}</span></Link>
+        <Link href={href} className={className}>{name}</Link>
     )
 }
 
