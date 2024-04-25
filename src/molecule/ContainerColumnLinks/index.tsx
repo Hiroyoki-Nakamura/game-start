@@ -1,5 +1,5 @@
 import React from "react";
-import RouterLink from "@/atom/RouterLink";
+import RouterLink from "../../atom/RouterLink";
 
 const ContainerColumnLinks: React.FC = () => {
     return(

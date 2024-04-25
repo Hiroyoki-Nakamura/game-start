@@ -1,10 +1,10 @@
 'use client'
 
-import Button from "@/atom/Button";
-import Logo from "@/atom/Logo";
-import ContainerColumnLinks from "@/molecule/ContainerColumnLinks";
-import ContainerLinks from "@/molecule/ContainerLinks";
 import React, { useState, useEffect } from "react";
+import Button from "../../atom/Button";
+import Logo from "../..//atom/Logo";
+import ContainerColumnLinks from "../../molecule/ContainerColumnLinks";
+import ContainerLinks from "../../molecule/ContainerLinks";
 
 const Header: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +32,7 @@ const Header: React.FC = () => {
     };
 
     return (
-        <div className="bg-black flex justify-between items-center px-4 py-2 border-b-2 border-red-500 relative">
+        <div className="bg-black flex justify-between items-center px-4 py-2 mb-10 border-b-2 border-red-500 relative">
             <Logo />
             {!isLargeScreen && (
                 <Button
