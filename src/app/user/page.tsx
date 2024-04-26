@@ -1,10 +1,7 @@
-import DataEditForm from "../../molecule/DataEditForm";
 import React from "react";
+import UserContainer from "../../organism/UserInfoContainer";
+import UserData from "../../molecule/UserData";
 
 export default function User() {
-  return (
-    <>
-      <DataEditForm></DataEditForm>
-    </>
-  );
+  return  <UserContainer></UserContainer>
 }

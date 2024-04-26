@@ -2,7 +2,7 @@ import React from "react";
 import Input from "../../atom/Input";
 import Button from "@/atom/Button";
 
-const DataEditForm: React.FC = () => {
+const PersonalEditForm: React.FC = () => {
   return (
     <>
       <form className="w-full">
@@ -14,7 +14,7 @@ const DataEditForm: React.FC = () => {
                 type={"text"}
                 placeholder={"First Name"}
                 name={"Nome"}
-                className="text-white w-full"
+                className="text-white w-full rounded-md p-2"
               />
             </div>
             <div>
@@ -23,7 +23,7 @@ const DataEditForm: React.FC = () => {
                 type={"text"}
                 placeholder={"Last Name"}
                 name={"Sobrenome"}
-                className="text-white w-full"
+                className="text-white w-full rounded-md p-2"
               />
             </div>
           </div>
@@ -34,7 +34,7 @@ const DataEditForm: React.FC = () => {
                 type={"tel"}
                 placeholder={"(11) 1111-1111"}
                 name={"Telefone"}
-                className=" text-white"
+                className="text-white w-full rounded-md p-2"
               />
             </div>
             <div>
@@ -43,7 +43,7 @@ const DataEditForm: React.FC = () => {
                 type={"tel"}
                 placeholder={"(11) 11111-1111"}
                 name={"Cel/Whatsapp"}
-                className=" text-white"
+                className="text-white w-full rounded-md p-2"
               />
             </div>
           </div>
@@ -54,50 +54,50 @@ const DataEditForm: React.FC = () => {
                 type={"number"}
                 placeholder={"00000-000"}
                 name={"CEP"}
-                className=" text-white"
+                className="text-white w-full rounded-md p-2"
               />
             </div>
           </div>
-          <div className="mb-2 grid grid-cols-4 ">
-            <div className="mr-4">
+          <div className="mb-2 grid grid-cols-2 ">
+            <div className="mr-4 col-10">
               <Input
                 classNameLabel="text-white flex flex-col"
                 type={"text"}
                 placeholder={"Address"}
                 name={"Endereço"}
-                className=" text-white"
+                className="text-white w-full rounded-md p-2"
               />
             </div>
             <div className="flex items-center">
               <Input
-                classNameLabel="text-white flex flex-col"
+                classNameLabel="text-white flex flex-col mr-5"
                 type={"checkbox"}
                 name={"Sem nº"}
-                className=" text-white"
+                className="text-white rounded-md mb-6"
               />
-            </div>
-            <div className="flex items-center">
               <Input
                 classNameLabel="text-white flex flex-col"
                 type={"number"}
                 placeholder={"Number"}
                 name={"Nº"}
-                className=" text-white"
+                className="text-white w-full rounded-md p-2"
               />
             </div>
           </div>
-          <Button
-            name={"Confirmar"}
-            className="text-white bg-green-500 hover:bg-green-400 mt-2"
-          />
-          <Button
-            name={"Voltar"}
-            className="text-white bg-gray-400 hover:bg-red-500"
-          />
+          <div className="flex justify-end">
+            <Button
+              name={"Confirmar"}
+              className="text-white bg-green-500 hover:bg-green-400 mt-2 rounded p-2 mr-2"
+            />
+            <Button
+              name={"Voltar"}
+              className="text-white bg-gray-400 hover:bg-red-500 rounded mt-2 p-2"
+            />
+          </div>
         </div>
       </form>
     </>
   );
 };
 
-export default DataEditForm;
+export default PersonalEditForm;

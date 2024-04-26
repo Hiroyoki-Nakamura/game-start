@@ -1,10 +1,5 @@
-import Header from "@/organism/Header";
-import HomeBody from "@/organism/HomeBody";
+import HomeContainer from "@/organism/HomeContainer";
 
 export default function Home() {
-  return (
-    <>
-      <HomeBody />
-    </>
-  );
+  return <HomeContainer />
 }
