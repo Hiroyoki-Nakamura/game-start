@@ -7,7 +7,7 @@ import ContainerColumnLinks from "../../molecule/ContainerColumnLinks";
 import ContainerLinks from "../../molecule/ContainerLinks";
 
 const Header: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isShowMenu, setIsShowMenu] = useState(false);
   const [isLargeScreen, setIsLargeScreen] = useState(false);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ const Header: React.FC = () => {
       setIsLargeScreen(window.innerWidth > 768);
 
       if (window.innerWidth > 768) {
-        setIsOpen(false);
+        setIsShowMenu(false);
       }
     };
 
@@ -28,7 +28,7 @@ const Header: React.FC = () => {
   }, []);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsShowMenu(!isShowMenu);
   };
 
   return (
@@ -41,7 +41,7 @@ const Header: React.FC = () => {
           className="text-white bg-red-500 focus:outline-none lg:hidden"
         />
       )}
-      {(isLargeScreen || isOpen) && (
+      {(isLargeScreen || isShowMenu) && (
         <div
           className={
             isLargeScreen

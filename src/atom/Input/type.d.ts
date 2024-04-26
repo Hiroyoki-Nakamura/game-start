@@ -4,4 +4,5 @@ export interface IInputProps {
   placeholder?: string;
   name: string;
   classNameLabel?: string;
+  readOnly?: boolean
 }
