@@ -1,8 +1,14 @@
+"use client";
+
 import React from "react";
 import Input from "../../atom/Input";
 import Button from "@/atom/Button";
 
+import useBackNavigation from "@/hooks/useBackNavigation";
+
 const UserEditForm: React.FC = () => {
+  const handleBackPage = useBackNavigation();
+
   return (
     <>
       <form className="w-full">
@@ -66,6 +72,7 @@ const UserEditForm: React.FC = () => {
             <Button
               name={"Voltar"}
               className="text-white bg-gray-400 hover:bg-red-500 rounded mt-2 p-2"
+              onClick={handleBackPage}
             />
           </div>
         </div>
