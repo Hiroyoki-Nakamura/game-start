@@ -1,4 +1,5 @@
 import React from "react";
+
 import { ICardProps } from "./type";
 
 const Card: React.FC<ICardProps> = ({ className, children }) => {

@@ -1,9 +1,11 @@
 "use client";
 
 import React, { useRef } from "react";
+
 import Card from "../../atom/Card";
-import { ICardProps } from "../../atom/Card/type";
 import Button from "../../atom/Button";
+
+import { ICardProps } from "../../atom/Card/type";
 
 const Carousel: React.FC<{ className: string; cardsData: ICardProps[] }> = ({
   className,

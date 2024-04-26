@@ -1,35 +1,16 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
+
 import Button from "../../atom/Button";
-import Logo from "../..//atom/Logo";
+import Logo from "../../atom/Logo";
 import ContainerColumnLinks from "../../molecule/ContainerColumnLinks";
 import ContainerLinks from "../../molecule/ContainerLinks";
 
+import { useNavHeader } from "../../hooks/useHeaderNavigation";
+
 const Header: React.FC = () => {
-  const [isShowMenu, setIsShowMenu] = useState(false);
-  const [isLargeScreen, setIsLargeScreen] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsLargeScreen(window.innerWidth > 768);
-
-      if (window.innerWidth > 768) {
-        setIsShowMenu(false);
-      }
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize();
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  const toggleMenu = () => {
-    setIsShowMenu(!isShowMenu);
-  };
+  const [{ isShowMenu, isLargeScreen }, toggleMenu] = useNavHeader();
 
   return (
     <div className="bg-black flex justify-between items-center px-4 py-2 mb-10 border-b-2 border-red-500 relative">

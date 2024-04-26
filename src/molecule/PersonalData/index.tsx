@@ -1,6 +1,6 @@
 import React from "react";
-import Input from "@/atom/Input";
-import Button from "@/atom/Button";
+
+import Input from "../../atom/Input";
 
 const PersonalData: React.FC = () => {
   return (

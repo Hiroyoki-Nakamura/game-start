@@ -1,10 +1,11 @@
 "use client";
 
 import React from "react";
-import Input from "../../atom/Input";
-import Button from "@/atom/Button";
 
-import useBackNavigation from "@/hooks/useBackNavigation";
+import Input from "../../atom/Input";
+import Button from "../../atom/Button";
+
+import useBackNavigation from "../../hooks/useBackNavigation";
 
 const PersonalEditForm: React.FC = () => {
   const handleBackPage = useBackNavigation();
