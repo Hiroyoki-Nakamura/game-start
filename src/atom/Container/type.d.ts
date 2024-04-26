@@ -1,4 +1,4 @@
-export interface ICardProps {
+export interface IContainerProps {
   className: string;
   children: React.ReactNode;
 }
