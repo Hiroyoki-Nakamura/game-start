@@ -1,67 +1,114 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 
 import Input from "../../atom/Input";
 import Button from "../../atom/Button";
 
 import useBackNavigation from "../../hooks/useBackNavigation";
 
+import { IUserProps } from "../../types/userTypes";
+
 const UserEditForm: React.FC = () => {
   const handleBackPage = useBackNavigation();
 
+  const [userData, setUserData] = useState<IUserProps>({
+    email: "",
+    confirmarEmail: "",
+    senha: "",
+    confirmarSenha: "",
+    nomeUsuario: "",
+  });
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    try {
+      await axios.put(`http://localhost:3004/usuario`, userData);
+      console.log("Dados atualizados com sucesso!");
+    } catch (error) {
+      console.error("Erro ao atualizar os dados", error);
+    }
+  };
+
   return (
     <>
-      <form className="w-full">
+      <form className="w-full" onSubmit={handleSubmit}>
         <div className="mb-2">
           <div className="mb-2 grid grid-cols-2 gap-4">
             <div className="mr-2">
               <Input
+                id={"email"}
                 classNameLabel="text-white flex flex-col"
                 type={"email"}
                 placeholder={"email@email.com"}
                 name={"E-mail"}
-                className="text-white w-full rounded-md p-2"
+                value={userData.email}
+                onChange={(event) =>
+                  setUserData({
+                    ...userData,
+                    email: event.currentTarget?.value,
+                  })
+                }
+                className="text-black w-full rounded-md p-2"
               />
             </div>
             <div>
               <Input
+                id={"confirmarEmail"}
                 classNameLabel="text-white flex flex-col"
                 type={"email"}
                 placeholder={"email@email.com"}
                 name={"Confirme o E-mail"}
-                className="text-white w-full rounded-md p-2"
+                className="text-black w-full rounded-md p-2"
               />
             </div>
           </div>
           <div className="mb-2 grid grid-cols-4 gap-8">
             <div className="mr-2">
               <Input
+                id={"senha"}
                 classNameLabel="text-white flex flex-col"
                 type={"password"}
                 placeholder={"Senha"}
                 name={"Senha"}
-                className="text-white w-full rounded-md p-2"
+                value={userData.senha}
+                onChange={(event) =>
+                  setUserData({
+                    ...userData,
+                    senha: event.currentTarget?.value,
+                  })
+                }
+                className="text-black w-full rounded-md p-2"
               />
             </div>
             <div>
               <Input
+                id={"confirmarSenha"}
                 classNameLabel="text-white flex flex-col"
                 type={"password"}
                 placeholder={"Senha"}
                 name={"Confirme a senha"}
-                className="text-white w-full rounded-md p-2"
+                className="text-black w-full rounded-md p-2"
               />
             </div>
           </div>
           <div className="mb-2 grid grid-cols-4 gap-8">
             <div className="mr-2">
               <Input
+                id={"nomeUsuario"}
                 classNameLabel="text-white flex flex-col"
                 type={"text"}
                 placeholder={"User Name"}
                 name={"Usuário"}
-                className="text-white w-full rounded-md p-2"
+                value={userData.nomeUsuario}
+                onChange={(event) =>
+                  setUserData({
+                    ...userData,
+                    nomeUsuario: event.currentTarget?.value,
+                  })
+                }
+                className="text-black w-full rounded-md p-2"
               />
             </div>
           </div>

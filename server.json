@@ -1,1 +1,9 @@
-{}
+{
+  "usuario": {
+    "email": "elaine@hotmail.com",
+    "confirmarEmail": "ahsbsb",
+    "senha": "elaine",
+    "confirmarSenha": "",
+    "nomeUsuario": "Laine"
+  }
+}

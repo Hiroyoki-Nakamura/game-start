@@ -8,7 +8,10 @@ const Input: React.FC<IInputProps> = ({
   placeholder,
   name,
   classNameLabel,
-  readOnly
+  value,
+  defaultValue,
+  onChange,
+  readOnly,
 }) => {
   return (
     <label className={classNameLabel} htmlFor={name}>
@@ -17,9 +20,12 @@ const Input: React.FC<IInputProps> = ({
         type={type}
         className={className}
         placeholder={placeholder}
+        defaultValue={defaultValue}
         id={name}
+        value={value}
+        onChange={onChange}
         readOnly={readOnly}
-      ></input>
+      />
     </label>
   );
 };
