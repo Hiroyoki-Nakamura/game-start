@@ -1,4 +1,5 @@
 import React from "react";
+
 import { IContentProps } from "./type";
 
 const Content: React.FC<IContentProps> = ({ children, className }) => {
