@@ -1,4 +1,4 @@
 export interface IHeaderProps {
-    isShowMenu: boolean;
-    isLargeScreen: boolean;
+  isShowMenu: boolean;
+  isLargeScreen: boolean;
 }

@@ -1,9 +1,13 @@
 {
   "usuario": {
-    "email": "elaine@hotmail.com",
-    "confirmarEmail": "ahsbsb",
-    "senha": "elaine",
-    "confirmarSenha": "",
-    "nomeUsuario": "Laine"
+    "nome": "Anderson",
+    "sobrenome": "Nakamura",
+    "telefone": "1139564582",
+    "celular": "11985643521",
+    "numero": "22451",
+    "cep": "07356200",
+    "endereco": "Rua shsuhsuhsuhsu",
+    "email": "elainenakamura@hotmail.com",
+    "nomeUsuario": "LaineNk124567"
   }
 }
