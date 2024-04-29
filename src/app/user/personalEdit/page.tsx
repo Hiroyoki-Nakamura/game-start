@@ -1,5 +1,5 @@
 import React from "react";
-import PersonalEditContainer from "../../../organism/PersonalEditContainer";
+import PersonalEditContainer from "../../../components/organism/PersonalEditContainer";
 
 export default function PersonalEdit() {
   return <PersonalEditContainer />;
