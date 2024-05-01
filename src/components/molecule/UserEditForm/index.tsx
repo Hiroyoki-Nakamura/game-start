@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 
 import Input from "../../atom/Input";
 import Button from "../../atom/Button";
@@ -8,15 +8,35 @@ import Button from "../../atom/Button";
 import useBackNavigation from "../../../hooks/useBackNavigation";
 import useEditForm from "../../../hooks/useEditForm";
 import useEditFormSubmit from "../../../hooks/useDataEditSubmit";
+import useEditHistory from "../../../hooks/useEditHistory";
+
+import { useHistory } from "../../../context/HistoryProvider";
+
+import { IDataProps } from "../../../types/dataTypes";
 
 const UserEditForm: React.FC = () => {
   const handleBackPage = useBackNavigation();
   const { editData, setEditData } = useEditForm();
   const { handleSubmit } = useEditFormSubmit();
+  const { addToUserEditHistory } = useHistory();
+  useEditHistory(editData);
+
+  const [pendingChanges, setPendingChanges] = useState<IDataProps>(editData);
+
+  const handleInputChange = (field: string, value: string) => {
+    setPendingChanges((prevChanges) => ({
+      ...prevChanges,
+      [field]: value,
+    }));
+  };
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    handleSubmit(editData);
+    addToUserEditHistory(
+      `Edited user: ${pendingChanges.email} ${pendingChanges.senha} ${pendingChanges.nomeUsuario}`
+    );
+    setEditData(pendingChanges);
+    handleSubmit(pendingChanges);
   };
 
   return (
@@ -30,13 +50,10 @@ const UserEditForm: React.FC = () => {
                 classNameLabel="text-white flex flex-col"
                 type={"email"}
                 placeholder={"email@email.com"}
-                name={"E-mail"}
-                value={editData.email || ""}
+                name={"E-mail:"}
+                value={pendingChanges.email}
                 onChange={(event) =>
-                  setEditData({
-                    ...editData,
-                    email: event.currentTarget?.value,
-                  })
+                  handleInputChange("email", event.target.value)
                 }
                 className="text-black w-full rounded-md p-2"
               />
@@ -47,7 +64,7 @@ const UserEditForm: React.FC = () => {
                 classNameLabel="text-white flex flex-col"
                 type={"email"}
                 placeholder={"email@email.com"}
-                name={"Confirme o E-mail"}
+                name={"Confirme o E-mail:"}
                 className="text-black w-full rounded-md p-2"
               />
             </div>
@@ -59,7 +76,7 @@ const UserEditForm: React.FC = () => {
                 classNameLabel="text-white flex flex-col"
                 type={"password"}
                 placeholder={"Senha"}
-                name={"Senha"}
+                name={"Senha:"}
                 value={editData.senha || ""}
                 onChange={(event) =>
                   setEditData({
@@ -76,7 +93,7 @@ const UserEditForm: React.FC = () => {
                 classNameLabel="text-white flex flex-col"
                 type={"password"}
                 placeholder={"Senha"}
-                name={"Confirme a senha"}
+                name={"Confirme a senha:"}
                 className="text-black w-full rounded-md p-2"
               />
             </div>
@@ -88,13 +105,10 @@ const UserEditForm: React.FC = () => {
                 classNameLabel="text-white flex flex-col"
                 type={"text"}
                 placeholder={"User Name"}
-                name={"Usuário"}
-                value={editData.nomeUsuario || ""}
+                name={"Usuário:"}
+                value={pendingChanges.nomeUsuario}
                 onChange={(event) =>
-                  setEditData({
-                    ...editData,
-                    nomeUsuario: event.currentTarget?.value,
-                  })
+                  handleInputChange("nomeUsuario", event.target.value)
                 }
                 className="text-black w-full rounded-md p-2"
               />
@@ -103,6 +117,7 @@ const UserEditForm: React.FC = () => {
           <div className="flex justify-end">
             <Button
               name={"Confirmar"}
+              type={"submit"}
               className="text-white bg-green-500 hover:bg-green-400 mt-2 rounded p-2 mr-2"
             />
             <Button

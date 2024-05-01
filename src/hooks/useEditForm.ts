@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+
 import { updateUserData, getUserData } from "../services/userServices";
 
 import { IDataProps } from "../types/dataTypes";
@@ -15,7 +16,6 @@ const useEditForm = (): IEditFormResults => {
         setEditData(data);
       } catch (error: any) {
         console.error(error.message);
-        setError("Não foi possível encontrar od dados");
       }
     };
 
@@ -30,7 +30,7 @@ const useEditForm = (): IEditFormResults => {
     }
   };
 
-  return { editData, updateData, setEditData, error };
+  return { editData, setEditData, error, updateData };
 };
 
 export default useEditForm;
