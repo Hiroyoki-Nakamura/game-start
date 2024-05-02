@@ -22,7 +22,7 @@ const useEditHistory = (userData: IDataProps) => {
         email,
         nomeUsuario,
       } = userData;
-      const historyMessage = `Edited user: ${nome} ${sobrenome} ${telefone} ${celular} ${numero} ${endereco} ${cep} ${email} ${nomeUsuario}`;
+      const historyMessage = `Edited user: ${nome} ${sobrenome} ${telefone} ${celular} ${cep} ${endereco} ${numero} ${email} ${nomeUsuario}`;
       addToUserEditHistory(historyMessage);
       prevUserData.current = userData;
 

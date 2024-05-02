@@ -9,7 +9,6 @@ const useEditFormSubmit = () => {
   const handleSubmit = async (data: IDataProps) => {
     try {
       await updateUserData(data);
-      console.log("Dados atualizados com sucesso!");
     } catch (error) {
       setError("Erro ao atualizar os dados");
       console.error("Erro ao atualizar os dados", error);

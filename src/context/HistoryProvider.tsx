@@ -24,7 +24,7 @@ interface HistoryContextValue {
   addToUserEditHistory: (edit: string) => void;
 }
 
-interface HistoryProviderProps {
+export interface HistoryProviderProps {
   children: ReactNode;
 }
 

@@ -19,9 +19,9 @@ const useUpdate = () => {
     sobrenome: editData?.sobrenome || "",
     telefone: editData?.telefone || "",
     celular: editData?.celular || "",
-    numero: editData?.numero || "",
     cep: editData?.cep || "",
     endereco: editData?.endereco || "",
+    numero: editData?.numero || "",
     email: editData?.email || "",
     nomeUsuario: editData?.nomeUsuario || "",
   }));
