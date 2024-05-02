@@ -1,246 +1,91 @@
 {
   "usuario": {
-    "nome": "Anderson",
-    "sobrenome": "Elaine",
-    "telefone": "88888888",
-    "celular": "99999999",
-    "numero": "1234",
-    "cep": "1111111",
-    "endereco": "Rua",
-    "email": "hiroyoki@hotmail.com",
-    "nomeUsuario": "HiroNk"
+    "nome": "A",
+    "sobrenome": "",
+    "telefone": "",
+    "celular": "",
+    "numero": "",
+    "cep": "",
+    "endereco": "",
+    "email": "",
+    "nomeUsuario": ""
   },
   "pageHistory": [
-    {},
     {
-      "id": "1033",
+      "id": "fc1f"
+    },
+    {
+      "id": "689c",
       "page": "/user"
     },
     {
-      "id": "033a",
+      "id": "7082",
       "page": "/activityHistory"
     },
     {
-      "id": "4751",
+      "id": "5da7",
       "page": "/user"
     },
     {
-      "id": "315f",
+      "id": "5121",
       "page": "/activityHistory"
     },
     {
-      "id": "642b",
+      "id": "bcfa",
       "page": "/user"
     },
     {
-      "id": "96d3",
-      "page": "/activityHistory"
-    },
-    {
-      "id": "43b2",
-      "page": "/user"
-    },
-    {
-      "id": "24c3",
-      "page": "/activityHistory"
-    },
-    {
-      "id": "d6dc",
-      "page": "/user"
-    },
-    {
-      "id": "50d2",
-      "page": "/activityHistory"
-    },
-    {
-      "id": "4c33",
-      "page": "/user"
-    },
-    {
-      "id": "fff8",
-      "page": "/activityHistory"
+      "id": "f8f3",
+      "page": "/"
     }
   ],
   "userEditHistory": [
-    {},
+    {
+      "id": "6eed"
+    },
     {
       "id": 0,
-      "timestamp": "2024-05-02T03:18:23.832Z",
+      "timestamp": "2024-05-02T03:32:39.388Z",
       "changes": {
-        "nome": "Hiro",
-        "sobrenome": "Elaine",
-        "telefone": "111111",
-        "celular": "111111",
-        "cep": "1234",
-        "endereco": "Rua",
-        "numero": "1111111",
-        "email": "hiroyoki@hotmail.com",
-        "nomeUsuario": "HiroNk"
+        "nome": "",
+        "sobrenome": "",
+        "telefone": "",
+        "celular": "",
+        "cep": "",
+        "endereco": "",
+        "numero": "",
+        "email": "",
+        "nomeUsuario": ""
       }
     },
     {
       "id": 0,
-      "timestamp": "2024-05-02T03:18:23.838Z",
+      "timestamp": "2024-05-02T03:32:39.393Z",
       "changes": {
-        "nome": "Hiro",
-        "sobrenome": "Elaine",
-        "telefone": "111111",
-        "celular": "111111",
-        "cep": "1234",
-        "endereco": "Rua",
-        "numero": "1111111",
-        "email": "hiroyoki@hotmail.com",
-        "nomeUsuario": "HiroNk"
+        "nome": "",
+        "sobrenome": "",
+        "telefone": "",
+        "celular": "",
+        "cep": "",
+        "endereco": "",
+        "numero": "",
+        "email": "",
+        "nomeUsuario": ""
       }
     },
     {
       "id": 0,
-      "timestamp": "2024-05-02T03:18:31.828Z",
+      "timestamp": "2024-05-02T03:32:42.709Z",
       "changes": {
-        "nome": "Hiro",
-        "sobrenome": "Nakamura",
-        "telefone": "88888888",
-        "celular": "111111",
-        "cep": "1234",
-        "endereco": "Rua",
-        "numero": "1111111",
-        "email": "hiroyoki@hotmail.com",
-        "nomeUsuario": "HiroNk"
-      }
-    },
-    {
-      "id": 0,
-      "timestamp": "2024-05-02T03:20:20.643Z",
-      "changes": {
-        "nome": "Hiro",
-        "sobrenome": "Nakamura",
-        "telefone": "88888888",
-        "celular": "111111",
-        "cep": "1234",
-        "endereco": "Rua",
-        "numero": "1111111",
-        "email": "hiroyoki@hotmail.com",
-        "nomeUsuario": "HiroNk"
-      }
-    },
-    {
-      "id": 0,
-      "timestamp": "2024-05-02T03:20:20.658Z",
-      "changes": {
-        "nome": "Hiro",
-        "sobrenome": "Nakamura",
-        "telefone": "88888888",
-        "celular": "111111",
-        "cep": "1234",
-        "endereco": "Rua",
-        "numero": "1111111",
-        "email": "hiroyoki@hotmail.com",
-        "nomeUsuario": "HiroNk"
-      }
-    },
-    {
-      "id": 0,
-      "timestamp": "2024-05-02T03:20:25.855Z",
-      "changes": {
-        "nome": "Anderson",
-        "sobrenome": "Nakamura",
-        "telefone": "88888888",
-        "celular": "111111",
-        "cep": "1234",
-        "endereco": "Rua",
-        "numero": "1111111",
-        "email": "hiroyoki@hotmail.com",
-        "nomeUsuario": "HiroNk"
-      }
-    },
-    {
-      "id": 0,
-      "timestamp": "2024-05-02T03:20:43.579Z",
-      "changes": {
-        "nome": "Anderson",
-        "sobrenome": "Nakamura",
-        "telefone": "88888888",
-        "celular": "111111",
-        "cep": "1234",
-        "endereco": "Rua",
-        "numero": "1111111",
-        "email": "hiroyoki@hotmail.com",
-        "nomeUsuario": "HiroNk"
-      }
-    },
-    {
-      "id": 0,
-      "timestamp": "2024-05-02T03:20:43.588Z",
-      "changes": {
-        "nome": "Anderson",
-        "sobrenome": "Nakamura",
-        "telefone": "88888888",
-        "celular": "111111",
-        "cep": "1234",
-        "endereco": "Rua",
-        "numero": "1111111",
-        "email": "hiroyoki@hotmail.com",
-        "nomeUsuario": "HiroNk"
-      }
-    },
-    {
-      "id": 0,
-      "timestamp": "2024-05-02T03:20:46.919Z",
-      "changes": {
-        "nome": "Anderson",
-        "sobrenome": "Elaine",
-        "telefone": "88888888",
-        "celular": "111111",
-        "cep": "1234",
-        "endereco": "Rua",
-        "numero": "1111111",
-        "email": "hiroyoki@hotmail.com",
-        "nomeUsuario": "HiroNk"
-      }
-    },
-    {
-      "id": 0,
-      "timestamp": "2024-05-02T03:22:40.318Z",
-      "changes": {
-        "nome": "Anderson",
-        "sobrenome": "Elaine",
-        "telefone": "88888888",
-        "celular": "111111",
-        "cep": "1234",
-        "endereco": "Rua",
-        "numero": "1111111",
-        "email": "hiroyoki@hotmail.com",
-        "nomeUsuario": "HiroNk"
-      }
-    },
-    {
-      "id": 0,
-      "timestamp": "2024-05-02T03:22:40.328Z",
-      "changes": {
-        "nome": "Anderson",
-        "sobrenome": "Elaine",
-        "telefone": "88888888",
-        "celular": "111111",
-        "cep": "1234",
-        "endereco": "Rua",
-        "numero": "1111111",
-        "email": "hiroyoki@hotmail.com",
-        "nomeUsuario": "HiroNk"
-      }
-    },
-    {
-      "id": 0,
-      "timestamp": "2024-05-02T03:22:44.590Z",
-      "changes": {
-        "nome": "Anderson",
-        "sobrenome": "Elaine",
-        "telefone": "88888888",
-        "celular": "99999999",
-        "cep": "1234",
-        "endereco": "Rua",
-        "numero": "1111111",
-        "email": "hiroyoki@hotmail.com",
-        "nomeUsuario": "HiroNk"
+        "nome": "A",
+        "sobrenome": "",
+        "telefone": "",
+        "celular": "",
+        "cep": "",
+        "endereco": "",
+        "numero": "",
+        "email": "",
+        "nomeUsuario": ""
       }
     }
   ]
