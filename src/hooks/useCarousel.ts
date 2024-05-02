@@ -16,7 +16,6 @@ const useCarolsel = (images: ICardProps[]) => {
   };
 
   useEffect(() => {
-    console.log("Índice atual:", currentIndex);
     const interval = setInterval(nextImage, 10000);
     return () => clearInterval(interval);
   }, [currentIndex]);
