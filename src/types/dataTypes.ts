@@ -7,8 +7,5 @@ export interface IDataProps {
   cep?: string;
   endereco?: string;
   email?: string;
-  confirmarEmail?: string;
-  senha?: string;
-  confirmarSenha?: string;
   nomeUsuario?: string;
 }

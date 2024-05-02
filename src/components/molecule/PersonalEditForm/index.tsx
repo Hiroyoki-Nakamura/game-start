@@ -1,24 +1,17 @@
 "use client";
 
-import React, { useState } from "react";
-import axios from "axios";
+import React from "react";
 
 import Input from "../../atom/Input";
 import Button from "../../atom/Button";
 
 import useBackNavigation from "../../../hooks/useBackNavigation";
-import useEditForm from "../../../hooks/useEditForm";
-import useEditFormSubmit from "@/hooks/useDataEditSubmit";
+
+import useUpdate from "../../../hooks/useUpdate";
 
 const PersonalEditForm: React.FC = () => {
   const handleBackPage = useBackNavigation();
-  const { editData, setEditData } = useEditForm();
-  const { handleSubmit } = useEditFormSubmit();
-
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    handleSubmit(editData);
-  };
+  const { pendingChanges, handleInputChange, onSubmit } = useUpdate();
 
   return (
     <>
@@ -31,12 +24,9 @@ const PersonalEditForm: React.FC = () => {
                 id="nome"
                 type={"text"}
                 placeholder={"First Name"}
-                value={editData.nome}
+                value={pendingChanges.nome}
                 onChange={(event) =>
-                  setEditData({
-                    ...editData,
-                    nome: event.currentTarget?.value,
-                  })
+                  handleInputChange("nome", event.target.value)
                 }
                 name={"Nome:"}
                 className="text-black w-full rounded-md p-2"
@@ -48,12 +38,9 @@ const PersonalEditForm: React.FC = () => {
                 id="sobrenome"
                 type={"text"}
                 placeholder={"Last Name"}
-                value={editData.sobrenome}
+                value={pendingChanges.sobrenome || ""}
                 onChange={(event) =>
-                  setEditData({
-                    ...editData,
-                    sobrenome: event.currentTarget?.value,
-                  })
+                  handleInputChange("sobrenome", event.target.value)
                 }
                 name={"Sobrenome:"}
                 className="text-black w-full rounded-md p-2"
@@ -67,12 +54,9 @@ const PersonalEditForm: React.FC = () => {
                 id={"telefone"}
                 type={"tel"}
                 placeholder={"(11) 1111-1111"}
-                value={editData.telefone}
+                value={pendingChanges.telefone || ""}
                 onChange={(event) =>
-                  setEditData({
-                    ...editData,
-                    telefone: event.currentTarget?.value,
-                  })
+                  handleInputChange("telefone", event.target.value)
                 }
                 name={"Telefone:"}
                 className="text-black w-full rounded-md p-2"
@@ -84,12 +68,9 @@ const PersonalEditForm: React.FC = () => {
                 id={"celular"}
                 type={"tel"}
                 placeholder={"(11) 11111-1111"}
-                value={editData.celular}
+                value={pendingChanges.celular || ""}
                 onChange={(event) =>
-                  setEditData({
-                    ...editData,
-                    celular: event.currentTarget?.value,
-                  })
+                  handleInputChange("celular", event.target.value)
                 }
                 name={"Celular:"}
                 className="text-black w-full rounded-md p-2"
@@ -103,12 +84,9 @@ const PersonalEditForm: React.FC = () => {
                 id={"cep"}
                 type={"text"}
                 placeholder={"00000-000"}
-                value={editData.cep}
+                value={pendingChanges.cep || ""}
                 onChange={(event) =>
-                  setEditData({
-                    ...editData,
-                    cep: event.currentTarget?.value,
-                  })
+                  handleInputChange("cep", event.target.value)
                 }
                 name={"CEP:"}
                 className="text-black w-full rounded-md p-2"
@@ -122,12 +100,9 @@ const PersonalEditForm: React.FC = () => {
                 id={"endereco"}
                 type={"text"}
                 placeholder={"Address"}
-                value={editData.endereco}
+                value={pendingChanges.endereco || ""}
                 onChange={(event) =>
-                  setEditData({
-                    ...editData,
-                    endereco: event.currentTarget?.value,
-                  })
+                  handleInputChange("endereco", event.target.value)
                 }
                 name={"Endereco:"}
                 className="text-black w-full rounded-md p-2"
@@ -146,12 +121,9 @@ const PersonalEditForm: React.FC = () => {
                 classNameLabel="text-white flex flex-col"
                 type={"number"}
                 placeholder={"Number"}
-                value={editData.numero}
+                value={pendingChanges.numero || ""}
                 onChange={(event) =>
-                  setEditData({
-                    ...editData,
-                    numero: event.currentTarget?.value,
-                  })
+                  handleInputChange("numero", event.target.value)
                 }
                 name={"Nº:"}
                 className="text-white w-full rounded-md p-2"
@@ -161,7 +133,7 @@ const PersonalEditForm: React.FC = () => {
           <div className="flex justify-end">
             <Button
               type={"submit"}
-              name={"Confirmar"}
+              name={"Salvar"}
               className="text-white bg-green-500 hover:bg-green-400 mt-2 rounded p-2 mr-2"
             />
             <Button

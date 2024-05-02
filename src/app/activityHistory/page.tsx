@@ -1,5 +1,5 @@
-import React from "react";
+import ActivityHistoryContainer from "../../components/organism/ActivityHistoryContainer";
 
 export default function ActivityHistory() {
-  return <></>;
+  return <ActivityHistoryContainer />;
 }

@@ -17,7 +17,7 @@ const UserData: React.FC = () => {
               classNameLabel="text-white flex flex-col"
               type={"email"}
               name={"E-mail:"}
-              value={userData ? userData.email : ""}
+              value={userData?.email || ""}
               className="text-white w-full rounded-md bg-black focus:outline-none"
               readOnly
             />
@@ -30,7 +30,7 @@ const UserData: React.FC = () => {
               classNameLabel="text-white flex flex-col"
               type={"text"}
               name={"Usuário:"}
-              value={userData ? userData.nomeUsuario : ""}
+              value={userData?.nomeUsuario || ""}
               className="text-white w-full rounded-md bg-black focus:outline-none"
               readOnly
             />

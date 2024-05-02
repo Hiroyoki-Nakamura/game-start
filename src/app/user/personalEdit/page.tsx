@@ -1,6 +1,10 @@
-import React from "react";
+import { HistoryProvider } from "@/context/HistoryProvider";
 import PersonalEditContainer from "../../../components/organism/PersonalEditContainer";
 
 export default function PersonalEdit() {
-  return <PersonalEditContainer />;
+  return( 
+    <HistoryProvider>
+  <PersonalEditContainer />;
+  </HistoryProvider>
+)
 }
