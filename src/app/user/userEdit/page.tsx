@@ -1,9 +1,8 @@
-import React from "react";
+import { HistoryProvider } from "@/context/HistoryProvider";
 import UserEditContainer from "../../../components/organism/UserEditContainer";
-import { HistoryProvider } from "../../../context/HistoryProvider";
 
 export default function UserEdit() {
-  return (
+  return( 
     <HistoryProvider>
   <UserEditContainer />
   </HistoryProvider>

@@ -3,7 +3,7 @@ import { getUserData } from "../services/userServices";
 import { IDataProps } from "../types/dataTypes";
 
 const useData = () => {
-  const [userData, setUserData] = useState<IDataProps | null>(null);
+  const [userData, setUserData] = useState<IDataProps | null>({});
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ const useData = () => {
     fetchUserData();
   }, []);
 
-  return { userData, error };
+  return { userData, error, setUserData };
 };
 
 export default useData;

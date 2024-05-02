@@ -2,7 +2,7 @@ import React from "react";
 
 import RouterLink from "../../atom/RouterLink";
 
-import { useHistory } from "@/context/HistoryProvider";
+import { useHistory } from "../../../context/HistoryProvider";
 
 const ContainerLinks: React.FC = () => {
   const { addToPageHistory } = useHistory();

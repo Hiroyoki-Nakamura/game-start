@@ -1,5 +1,6 @@
-import { HistoryProvider } from "@/context/HistoryProvider";
 import HomeContainer from "../components/organism/HomeContainer";
+
+import { HistoryProvider } from "../context/HistoryProvider";
 
 export default function Home() {
   return (

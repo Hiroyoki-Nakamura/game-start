@@ -3,10 +3,9 @@ import { useState, useEffect } from "react";
 import { updateUserData, getUserData } from "../services/userServices";
 
 import { IDataProps } from "../types/dataTypes";
-import { IEditFormResults } from "../types/editFormResultsTypes";
 
-const useEditForm = (): IEditFormResults => {
-  const [editData, setEditData] = useState<IDataProps>({});
+const useEditForm = () => {
+  const [editData, setEditData] = useState<IDataProps | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {

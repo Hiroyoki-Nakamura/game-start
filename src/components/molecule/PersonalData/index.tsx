@@ -2,7 +2,7 @@ import React from "react";
 
 import Input from "../../atom/Input";
 
-import useData from "@/hooks/useData";
+import useData from "../../../hooks/useData";
 
 const PersonalData: React.FC = () => {
   const { userData } = useData();
@@ -17,7 +17,7 @@ const PersonalData: React.FC = () => {
               classNameLabel="text-white flex flex-col"
               type={"text"}
               name={"Nome:"}
-              value={userData ? userData.nome : ""}
+              value={userData?.nome || ""}
               className="text-white w-full rounded-md bg-black focus:outline-none"
               readOnly
             />
@@ -28,7 +28,7 @@ const PersonalData: React.FC = () => {
               classNameLabel="text-white flex flex-col"
               type={"text"}
               name={"Sobrenome:"}
-              value={userData ? userData.sobrenome : ""}
+              value={userData?.sobrenome || ""}
               className="text-white w-full rounded-md bg-black focus:outline-none"
               readOnly
             />
@@ -40,7 +40,7 @@ const PersonalData: React.FC = () => {
               id={"telefone"}
               classNameLabel="text-white flex flex-col"
               type={"tel"}
-              value={userData ? userData.telefone : ""}
+              value={userData?.telefone || ""}
               name={"Telefone:"}
               className="text-white w-full rounded-md bg-black focus:outline-none"
               readOnly
@@ -51,7 +51,7 @@ const PersonalData: React.FC = () => {
               id={"celular"}
               classNameLabel="text-white flex flex-col"
               type={"tel"}
-              value={userData ? userData.celular : ""}
+              value={userData?.celular || ""}
               name={"Cel/Whatsapp:"}
               className="text-white w-full rounded-md bg-black focus:outline-none"
               readOnly
@@ -64,7 +64,7 @@ const PersonalData: React.FC = () => {
               id={"cep"}
               classNameLabel="text-white flex flex-col"
               type={"number"}
-              value={userData ? userData.cep : ""}
+              value={userData?.cep || ""}
               name={"CEP:"}
               className="text-white w-full rounded-md bg-black focus:outline-none"
               readOnly
@@ -77,7 +77,7 @@ const PersonalData: React.FC = () => {
               id={"endereco"}
               classNameLabel="text-white flex flex-col"
               type={"text"}
-              value={userData ? userData.endereco : ""}
+              value={userData?.endereco || ""}
               name={"Endereço:"}
               className="text-white w-full rounded-md bg-black focus:outline-none"
               readOnly
@@ -88,7 +88,7 @@ const PersonalData: React.FC = () => {
               id={"numero"}
               classNameLabel="text-white flex flex-col"
               type={"number"}
-              value={userData ? userData.numero : ""}
+              value={userData?.numero || ""}
               name={"Nº:"}
               className="text-white w-full rounded-md bg-black focus:outline-none"
               readOnly

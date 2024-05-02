@@ -1,16 +1,28 @@
 import { useEffect, useRef } from "react";
-import { IDataProps } from "../types/dataTypes";
+
 import { useHistory } from "../context/HistoryProvider";
+
+import { IDataProps } from "../types/dataTypes";
+
 
 const useEditHistory = (userData: IDataProps) => {
   const { addToUserEditHistory } = useHistory();
   const prevUserData = useRef<IDataProps | null>(null);
 
   useEffect(() => {
-    if (userData && prevUserData.current !== userData) {
-      const { nome, sobrenome, telefone, celular, numero, endereco, cep } =
-        userData;
-      const historyMessage = `Edited user: ${nome} ${sobrenome} ${telefone} ${celular} ${numero} ${endereco} ${cep}`;
+    if (userData !== undefined && prevUserData.current !== userData) {
+      const {
+        nome,
+        sobrenome,
+        telefone,
+        celular,
+        numero,
+        endereco,
+        cep,
+        email,
+        nomeUsuario,
+      } = userData;
+      const historyMessage = `Edited user: ${nome} ${sobrenome} ${telefone} ${celular} ${numero} ${endereco} ${cep} ${email} ${nomeUsuario}`;
       addToUserEditHistory(historyMessage);
       prevUserData.current = userData;
 

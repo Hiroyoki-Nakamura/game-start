@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import Content from "../../../components/atom/Content";
 import Button from "../../../components/atom/Button";
 
-import { UserEditHistoryEntry } from "../../../context/HistoryProvider";
+import { UserEditHistoryEntry } from "../../../types/historyTypes";
 
 interface ActivityHistoryContentProps {
   pageHistory: string[];

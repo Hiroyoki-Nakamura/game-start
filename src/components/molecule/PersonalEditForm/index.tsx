@@ -1,43 +1,17 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 
 import Input from "../../atom/Input";
 import Button from "../../atom/Button";
 
 import useBackNavigation from "../../../hooks/useBackNavigation";
-import useEditForm from "../../../hooks/useEditForm";
-import useEditFormSubmit from "@/hooks/useDataEditSubmit";
 
-import useEditHistory from "../../../hooks/useEditHistory";
-
-import { IDataProps } from "@/types/dataTypes";
-import { useHistory } from "@/context/HistoryProvider";
+import useUpdate from "../../../hooks/useUpdate";
 
 const PersonalEditForm: React.FC = () => {
   const handleBackPage = useBackNavigation();
-  const { editData, setEditData } = useEditForm();
-  const { handleSubmit } = useEditFormSubmit();
-  const { addToUserEditHistory } = useHistory();
-  useEditHistory(editData);
-
-  const [pendingChanges, setPendingChanges] = useState<IDataProps>(editData);
-
-  const handleInputChange = (field: string, value: string) => {
-    setPendingChanges((prevChanges) => ({
-      ...prevChanges,
-      [field]: value,
-    }));
-  };
-
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    addToUserEditHistory(
-      `Edited user: ${pendingChanges.nome} ${pendingChanges.sobrenome} ${pendingChanges.telefone} ${pendingChanges.celular} ${pendingChanges.cep} ${pendingChanges.endereco} ${pendingChanges.numero} ${pendingChanges.email} ${pendingChanges.nomeUsuario}`
-    );
-    setEditData(pendingChanges);
-    handleSubmit(pendingChanges);
-  };
+  const { pendingChanges, handleInputChange, onSubmit } = useUpdate();
 
   return (
     <>
@@ -64,7 +38,7 @@ const PersonalEditForm: React.FC = () => {
                 id="sobrenome"
                 type={"text"}
                 placeholder={"Last Name"}
-                value={pendingChanges.sobrenome}
+                value={pendingChanges.sobrenome || ""}
                 onChange={(event) =>
                   handleInputChange("sobrenome", event.target.value)
                 }
@@ -80,7 +54,7 @@ const PersonalEditForm: React.FC = () => {
                 id={"telefone"}
                 type={"tel"}
                 placeholder={"(11) 1111-1111"}
-                value={pendingChanges.telefone}
+                value={pendingChanges.telefone || ""}
                 onChange={(event) =>
                   handleInputChange("telefone", event.target.value)
                 }
@@ -94,7 +68,7 @@ const PersonalEditForm: React.FC = () => {
                 id={"celular"}
                 type={"tel"}
                 placeholder={"(11) 11111-1111"}
-                value={pendingChanges.celular}
+                value={pendingChanges.celular || ""}
                 onChange={(event) =>
                   handleInputChange("celular", event.target.value)
                 }
@@ -110,7 +84,7 @@ const PersonalEditForm: React.FC = () => {
                 id={"cep"}
                 type={"text"}
                 placeholder={"00000-000"}
-                value={pendingChanges.cep}
+                value={pendingChanges.cep || ""}
                 onChange={(event) =>
                   handleInputChange("cep", event.target.value)
                 }
@@ -126,7 +100,7 @@ const PersonalEditForm: React.FC = () => {
                 id={"endereco"}
                 type={"text"}
                 placeholder={"Address"}
-                value={pendingChanges.endereco}
+                value={pendingChanges.endereco || ""}
                 onChange={(event) =>
                   handleInputChange("endereco", event.target.value)
                 }
@@ -147,7 +121,7 @@ const PersonalEditForm: React.FC = () => {
                 classNameLabel="text-white flex flex-col"
                 type={"number"}
                 placeholder={"Number"}
-                value={pendingChanges.numero}
+                value={pendingChanges.numero || ""}
                 onChange={(event) =>
                   handleInputChange("numero", event.target.value)
                 }
