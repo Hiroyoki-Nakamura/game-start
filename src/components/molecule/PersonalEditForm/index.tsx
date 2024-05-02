@@ -110,7 +110,7 @@ const PersonalEditForm: React.FC = () => {
             </div>
             <div className="flex items-center">
               <Input
-                id={"endereco"}
+                id={"semNumero"}
                 classNameLabel="text-white flex flex-col mr-5"
                 type={"checkbox"}
                 name={"Sem nº"}

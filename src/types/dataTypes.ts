@@ -3,9 +3,9 @@ export interface IDataProps {
   sobrenome?: string;
   telefone?: string;
   celular?: string;
-  numero?: string;
   cep?: string;
   endereco?: string;
+  numero?: string;
   email?: string;
   nomeUsuario?: string;
 }
