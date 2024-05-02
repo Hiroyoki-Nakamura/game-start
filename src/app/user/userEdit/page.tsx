@@ -2,9 +2,9 @@ import { HistoryProvider } from "@/context/HistoryProvider";
 import UserEditContainer from "../../../components/organism/UserEditContainer";
 
 export default function UserEdit() {
-  return( 
+  return (
     <HistoryProvider>
-  <UserEditContainer />
-  </HistoryProvider>
-  )
+      <UserEditContainer />
+    </HistoryProvider>
+  );
 }

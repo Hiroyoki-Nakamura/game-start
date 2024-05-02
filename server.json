@@ -65,6 +65,18 @@
     {
       "id": "5992",
       "page": "/activityHistory"
+    },
+    {
+      "id": "0c70",
+      "page": "/user"
+    },
+    {
+      "id": "5a61",
+      "page": "/activityHistory"
+    },
+    {
+      "id": "6c7c",
+      "page": "/"
     }
   ],
   "userEditHistory": [
@@ -117,7 +129,7 @@
       }
     },
     {
-      "id": 0,
+      "id": "0",
       "timestamp": "2024-05-02T06:04:15.712Z",
       "changes": {
         "nome": "A",
@@ -132,7 +144,7 @@
       }
     },
     {
-      "id": 0,
+      "id": "0",
       "timestamp": "2024-05-02T06:04:51.773Z",
       "changes": {
         "nome": "Elaine",
@@ -147,7 +159,7 @@
       }
     },
     {
-      "id": 0,
+      "id": "0",
       "timestamp": "2024-05-02T06:04:52.677Z",
       "changes": {
         "nome": "Elaine",
@@ -162,7 +174,7 @@
       }
     },
     {
-      "id": 0,
+      "id": "0",
       "timestamp": "2024-05-02T06:04:57.664Z",
       "changes": {
         "nome": "Elaine",
@@ -177,7 +189,7 @@
       }
     },
     {
-      "id": 0,
+      "id": "0",
       "timestamp": "2024-05-02T06:05:13.502Z",
       "changes": {
         "nome": "Elaine",
@@ -188,6 +200,21 @@
         "endereco": "rua",
         "numero": "akmskns",
         "email": "02970050",
+        "nomeUsuario": "elaine@hotmail.com"
+      }
+    },
+    {
+      "id": 0,
+      "timestamp": "2024-05-02T22:20:03.828Z",
+      "changes": {
+        "nome": "Elaine",
+        "sobrenome": "Nakamura",
+        "telefone": "99999999",
+        "celular": "88888888",
+        "cep": "02970050",
+        "endereco": "rua",
+        "numero": "akmskns",
+        "email": "452",
         "nomeUsuario": "elaine@hotmail.com"
       }
     }

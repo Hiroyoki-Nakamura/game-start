@@ -2,9 +2,9 @@ import { HistoryProvider } from "@/context/HistoryProvider";
 import PersonalEditContainer from "../../../components/organism/PersonalEditContainer";
 
 export default function PersonalEdit() {
-  return( 
+  return (
     <HistoryProvider>
-  <PersonalEditContainer />;
-  </HistoryProvider>
-)
+      <PersonalEditContainer />;
+    </HistoryProvider>
+  );
 }

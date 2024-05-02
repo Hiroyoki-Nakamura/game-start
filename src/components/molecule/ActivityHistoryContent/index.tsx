@@ -24,7 +24,7 @@ const ActivityHistoryContent: React.FC<ActivityHistoryContentProps> = ({
         <Content className="p-4 border-solid border-red-500 border-2">
           <Button
             name="Histórico de Navegação"
-            className="text-white w-full border-solid border-2 border-red-500"
+            className="text-white w-full border-solid border-2 border-red-500 hover:text-black hover:bg-white"
             onClick={() => setShowPageHistory(!showPageHistory)}
           />
           {showPageHistory && (
@@ -45,7 +45,7 @@ const ActivityHistoryContent: React.FC<ActivityHistoryContentProps> = ({
         <Content className="p-4 border-solid border-red-500 border-2">
           <Button
             name="Histórico de Alteração de Dados do Usuário"
-            className="text-white w-full border-solid border-2 border-red-500"
+            className="text-white w-full border-solid border-2 border-red-500  hover:text-black hover:bg-white"
             onClick={() => setShowUserEditHistory(!showUserEditHistory)}
           />
           {showUserEditHistory && (
